@@ -1,16 +1,16 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import SingedInLinks from './SingedinLinks' 
-import SingedOutLinks from './SingedOutLinks'
+import SignedInLinks from './SignedinLinks' 
+import SignedOutLinks from './SignedOutLinks'
 
 
 const Navbar =() => {
     return(
         <nav className="nav-wrapper grey darken-3">
             <div className="container">
-                <Link to='/' className="brand-logo">MarioPlan</Link>>
-                <SingedInLinks/>
-                <SingedOutLinks/>
+                <Link to='/' className="brand-logo">Fluffmeister</Link>
+                <SignedInLinks/>
+                <SignedOutLinks/>
             </div>
         </nav>
     )
