@@ -20,11 +20,11 @@ body{
   margin:0;
   padding:0;
   font-family: sans-serif;
-  background-image: url(/frontend/public//img/background.jpg) no-repeat;
-  background-size: 100%;
+  background: url(/img/background.jpg) no-repeat;
+  background-size: cover;
   background-position: bottom;
   background-color: dodgerblue;
-  min-height: 100%;
+  min-height: 100% ;
 
 }
 form{
@@ -44,4 +44,11 @@ input[type=password]:not(.browser-default):focus:not([readonly]),
 textarea.materializ-textarea:focus:not([readyonly]){
   border-color:hotpink;
   box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+  color: #ec407a !important;
 }
