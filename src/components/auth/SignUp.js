@@ -23,7 +23,7 @@ class SignUp extends Component {
         const { auth } = this.props;
         if (auth.uid) return <Redirect to='/' /> 
         return (
-            <div className='container'>
+            <div className='container z-depth-5'>
                 <form onSubmit={this.handleSubmit} className="white">
                     <h5 className='grey-text text-darken-3'>Register</h5>
                     <div className='input-field'>
@@ -44,7 +44,7 @@ class SignUp extends Component {
                     </div>
                     
                     <div className='input-field'>
-                        <button className='btn pink lighten-1 z-depth-0'>Register</button>
+                        <button className='waves-effect waves-light btn pink lighten-1 z-depth-5'>Register</button>
                     </div>
                 </form>
             </div>
