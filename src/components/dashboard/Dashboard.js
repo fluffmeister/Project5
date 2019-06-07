@@ -14,14 +14,14 @@ class Dashboard extends Component {
         const { projects, auth }= this.props;
         if (!auth.uid) return <Redirect to='/signin' /> 
         return(
-         <div className='dashboard container'>
-            <div clasName='row'>
+         <div className='container'>
+            <div className='row'>
                 <div className='col s12 m6'>
-                    <ProjectList projects={projects } />
+                    <ProjectList projects={projects} />
                 </div>
-
-                <div className='col s12 m5 offset-m1'></div>
+                <div className='col s12 m5 offset-m1'>
                     <Notifications />
+                </div>
             </div>
          </div>   
         )
