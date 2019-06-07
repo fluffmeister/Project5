@@ -32,3 +32,24 @@ exports.projectCreate = functions.firestore
 
         return createNotification(notification)
 })
+
+//trigger for when a user is created
+exports.userJoined = functions.auth.user()
+    .onCreate(user=>{
+    
+        return admin.firestore().collection('users')
+            .doc(user.uid)
+            .get()
+            .then(doc=>{
+                const newUser = doc.data()
+                const notification = {
+                    content: 'Joined the Party',
+                    user: `${newUser.firstName} ${newUser.lastName}`,
+                    time: admin.firestore.FieldValue.serverTimestamp()
+                }
+
+                return createNotification(notification)
+
+            })
+
+})
